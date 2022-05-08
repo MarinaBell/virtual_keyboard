@@ -1,98 +1,83 @@
-let textarea = document.createElement("textarea");
-textarea.className = "textarea";
-textarea.placeholder = "";
+import keysdata from './keys.js';
+console.log(keysdata[0][0])
+const textarea = document.createElement('textarea');
+textarea.className = 'textarea';
+textarea.placeholder = '';
 document.body.append(textarea);
-
-let keyboard = document.createElement("div");
-keyboard.classList.add("keyboard");
+const keyboard = document.createElement('div');
+keyboard.classList.add('keyboard');
 keyboard.innerHTML = `<div class="first-row"></div>
 <div class="second-row"></div>
 <div class="third-row"></div>
 <div class="fourth-row"></div>
-<div class="fifth-row"></div>`
-
+<div class="fifth-row"></div>`;
 document.body.append(keyboard);
-
-let backQuote = 192;
-let digit1 = 49;
-let digit2 = 50;
-let digit3 = 51;
-let digit4 = 52;
-let digit5 = 53;
-let digit6 = 54;
-let digit7 = 55;
-let digit8 = 56;
-let digit9 = 57;
-let digit0 = 48;
-let minus = 189;
-let equal = 187;
-let backSlash = 220;
-let backspace = 8;
-
-let q = 81;
-let w = 87;
-let e = 69;
-let r = 82;
-let t = 84;
-let y = 89;
-let u = 85;
-let i = 73;
-let o = 79;
-let p = 80;
-let bracketLeft = 219;
-let bracketRight = 221;
-
-let a = 65;
-let s = 83;
-let d = 68;
-let f = 70;
-let g = 71;
-let h = 72;
-let j = 74;
-let k = 75;
-let l = 76;
-let semicolon = 186;
-let quote = 222;
-
-let z = 90;
-let x = 88;
-let c = 67;
-let v = 86;
-let b = 66;
-let n = 78;
-let m = 77;
-let quoteleft = 188;
-let quoteright = 190;
-let slash = 191;
-let tab = 9;
-
-let caps = 20;
-let enter = 13;
-let shiftLeft = 16;
-let shiftRight = 16;
-let space = 32;
-let win = 91;
-let winRight = 92;
-let alt = 18;
-let ctrl = 17;
-
-let arrowLeft = 37;
-let arrowRight = 39;
-let arrowUp = 38;
-let arrowDown = 40;
-let del = 46;
-
-// document.onkeypress = function(event) {
-//     // keyboard.push(event.charCode);
-//     // console.log(keyboard);
-//     // console.log(event)
-//     firstrowButtons.push(event.charCode);
-//     console.log(firstrowButtons);
-// }
-
-function initFirstRow() { 
-    let outFirst = ''; 
-    outFirst = ` <div class="button btn" data = "${backQuote}">${String.fromCharCode(backQuote)}</div>
+const backQuote = 192;
+const digit1 = 49;
+const digit2 = 50;
+const digit3 = 51;
+const digit4 = 52;
+const digit5 = 53;
+const digit6 = 54;
+const digit7 = 55;
+const digit8 = 56;
+const digit9 = 57;
+const digit0 = 48;
+const minus = 189;
+const equal = 187;
+const backSlash = 220;
+const backspace = 8;
+const q = 81;
+const w = 87;
+const e = 69;
+const r = 82;
+const t = 84;
+const y = 89;
+const u = 85;
+const i = 73;
+const o = 79;
+const p = 80;
+const bracketLeft = 219;
+const bracketRight = 221;
+const a = 65;
+const s = 83;
+const d = 68;
+const f = 70;
+const g = 71;
+const h = 72;
+const j = 74;
+const k = 75;
+const l = 76;
+const semicolon = 186;
+const quote = 222;
+const z = 90;
+const x = 88;
+const c = 67;
+const v = 86;
+const b = 66;
+const n = 78;
+const m = 77;
+const quoteleft = 188;
+const quoteright = 190;
+const slash = 191;
+const tab = 9;
+const caps = 20;
+const enter = 13;
+const shiftLeft = 16;
+const shiftRight = 16;
+const space = 32;
+const win = 91;
+const winRight = 92;
+const alt = 18;
+const ctrl = 17;
+const arrowLeft = 37;
+const arrowRight = 39;
+const arrowUp = 38;
+const arrowDown = 40;
+const del = 46;
+function initFirstRow() {
+  let outFirst = '';
+  outFirst = ` <div class="button btn" data = "${backQuote}">${'`'}</div>
     <div class="button btn" data = "${digit1}">${String.fromCharCode(digit1)}</div>
     <div class="button btn" data = "${digit2}">${String.fromCharCode(digit2)}</div>
     <div class="button btn" data = "${digit3}">${String.fromCharCode(digit3)}</div>
@@ -103,18 +88,16 @@ function initFirstRow() {
     <div class="button btn" data = "${digit8}">${String.fromCharCode(digit8)}</div>
     <div class="button btn" data = "${digit9}">${String.fromCharCode(digit9)}</div>
     <div class="button btn" data = "${digit0}">${String.fromCharCode(digit0)}</div>
-    <div class="button btn" data = "${minus}">${String.fromCharCode(minus)}</div>
-    <div class="button btn" data = "${equal}">${String.fromCharCode(equal)}</div>
-    <div class="button btn" data = "${backSlash}">${String.fromCharCode(backSlash)}</div>
-    <div class="button btn" data = "${backspace}">${String.fromCharCode(backspace)}</div>`
-
-    document.querySelector('.first-row').innerHTML = outFirst;
+    <div class="button btn" data = "${minus}">${'-'}</div>
+    <div class="button btn" data = "${equal}">${'+'}</div>
+    <div class="button btn" data = "${backSlash}">${'|'}</div>
+    <div class="button btn" data = "${backspace}">${'←'}</div>`;
+  document.querySelector('.first-row').innerHTML = outFirst;
 }
 initFirstRow();
-
-function initSecondRow() { 
-    let outSecond = ''; 
-    outSecond = ` <div class="button-tab btn" data = "${tab}">${String.fromCharCode(tab)}Tab</div>
+function initSecondRow() {
+  let outSecond = '';
+  outSecond = ` <div class="button-tab btn" data = "${tab}">${String.fromCharCode(tab)}Tab</div>
     <div class="button btn" data = "${q}">${String.fromCharCode(q)}</div>
     <div class="button btn" data = "${w}">${String.fromCharCode(w)}</div>
     <div class="button btn" data = "${e}">${String.fromCharCode(e)}</div>
@@ -125,17 +108,16 @@ function initSecondRow() {
     <div class="button btn" data = "${i}">${String.fromCharCode(i)}</div>
     <div class="button btn" data = "${o}">${String.fromCharCode(o)}</div>
     <div class="button btn" data = "${p}">${String.fromCharCode(p)}</div>
-    <div class="button btn" data = "${bracketLeft}">${String.fromCharCode(bracketLeft)}</div>
-    <div class="button btn" data = "${bracketRight}">${String.fromCharCode(bracketRight)}</div>
-    <div class="button-tab btn" data = "${del}">${String.fromCharCode(del)}Del</div>`
-
-    document.querySelector('.second-row').innerHTML = outSecond;
+    <div class="button btn" data = "${bracketLeft}">${"["}</div>
+    <div class="button btn" data = "${bracketRight}">${"]"}</div>
+    <div class="button-tab btn" data = "${del}">${'Del'}</div>`;
+  document.querySelector('.second-row').innerHTML = outSecond;
 }
 initSecondRow();
 
-function initThirdRow() { 
-    let outThird = ''; 
-    outThird = ` <div class="caps-button btn" data = "${caps}">${String.fromCharCode(caps)}Caps Lock</div>
+function initThirdRow() {
+  let outThird = '';
+  outThird = ` <div class="caps-button btn" data = "${caps}">${'Caps Lock'}</div>
     <div class="button btn" data = "${a}">${String.fromCharCode(a)}</div>
     <div class="button btn" data = "${s}">${String.fromCharCode(s)}</div>
     <div class="button btn" data = "${d}">${String.fromCharCode(d)}</div>
@@ -145,18 +127,17 @@ function initThirdRow() {
     <div class="button btn" data = "${j}">${String.fromCharCode(j)}</div>
     <div class="button btn" data = "${k}">${String.fromCharCode(k)}</div>
     <div class="button btn" data = "${l}">${String.fromCharCode(l)}</div>
-    <div class="button btn" data = "${semicolon}">${String.fromCharCode(semicolon)}</div>
-    <div class="button btn" data = "${quote}">${String.fromCharCode(quote)}</div>
-    <div class="enter-button btn" data = "${enter}">${String.fromCharCode(enter)}Enter</div>`
+    <div class="button btn" data = "${semicolon}">${";"}</div>
+    <div class="button btn" data = "${quote}">${'"'}</div>
+    <div class="enter-button btn" data = "${enter}">${String.fromCharCode(enter)}Enter</div>`;
 
-    document.querySelector('.third-row').innerHTML = outThird;
+  document.querySelector('.third-row').innerHTML = outThird;
 }
 initThirdRow();
 
-function initFourthRow() { 
-    let outFourth = ''; 
-    outFourth = ` <div class="shift-tab btn" data = "${shiftLeft}">${String.fromCharCode(shiftLeft)}Shift</div>
-    
+function initFourthRow() {
+  let outFourth = '';
+  outFourth = ` <div class="shift-tab btn" data = "${shiftLeft}">${'Shift'}</div>
     <div class="button btn" data = "${z}">${String.fromCharCode(z)}</div>
     <div class="button btn" data = "${x}">${String.fromCharCode(x)}</div>
     <div class="button btn" data = "${c}">${String.fromCharCode(c)}</div>
@@ -164,61 +145,94 @@ function initFourthRow() {
     <div class="button btn" data = "${b}">${String.fromCharCode(b)}</div>
     <div class="button btn" data = "${n}">${String.fromCharCode(n)}</div>
     <div class="button btn" data = "${m}">${String.fromCharCode(m)}</div>
-    <div class="button btn" data = "${quoteleft}">${String.fromCharCode(quoteleft)}</div>
-    <div class="button btn" data = "${quoteright}">${String.fromCharCode(quoteright)}</div>
-    <div class="button btn" data = "${slash}">${String.fromCharCode(slash)}</div>
-    <div class="button btn" data = "${arrowUp}">${String.fromCharCode(arrowUp)}</div>
-    
-    <div class="shift-tab btn right" data = "${shiftRight}">${String.fromCharCode(shiftRight)}Shift</div>`
-
-    document.querySelector('.fourth-row').innerHTML = outFourth;
+    <div class="button btn" data = "${quoteleft}">${","}</div>
+    <div class="button btn" data = "${quoteright}">${"."}</div>
+    <div class="button btn" data = "${slash}">${"/"}</div>
+    <div class="button btn" data = "${arrowUp}">${'↑'}</div>
+    <div class="shift-tab btn right" data = "${shiftRight}">${'Shift'}</div>`;
+  document.querySelector('.fourth-row').innerHTML = outFourth;
 }
-initFourthRow()
+initFourthRow();
 
-function initFifthRow() { 
-    let outFifth = ''; 
-    outFifth = ` <div class="ctrl-button btn" data = "${ctrl}">${String.fromCharCode(ctrl)}Ctrl</div>
-    <div class="ctrl-button btn" data = "${win}">${String.fromCharCode(win)}Win</div>
-    <div class="ctrl-button btn" data = "${alt}">${String.fromCharCode(alt)}Alt</div>
+function initFifthRow() {
+  let outFifth = '';
+  outFifth = ` <div class="ctrl-button btn" data = "${ctrl}">${'Ctrl'}</div>
+    <div class="ctrl-button btn" data = "${win}">${'Win'}</div>
+    <div class="ctrl-button btn" data = "${alt}">${'Alt'}</div>
     <div class="space-tab btn" data = "${space}">${String.fromCharCode(space)}</div>
-    <div class="ctrl-button btn right" data = "${alt}">${String.fromCharCode(alt)}Alt</div>
-    <div class="left btn" data = "${arrowLeft}">${String.fromCharCode(arrowLeft)}</div>
-    <div class="down btn" data = "${arrowDown}">${String.fromCharCode(arrowDown)}</div>
-    <div class="arrow-right btn" data = "${arrowRight}">${String.fromCharCode(arrowRight)}</div>
-    <div class="ctrl-button btn right" data = "${ctrl}">${String.fromCharCode(ctrl)}Ctrl</div>`
-
-    document.querySelector('.fifth-row').innerHTML = outFifth;
-
+    <div class="ctrl-button btn right" data = "${alt}">${'Alt'}</div>
+    <div class="left btn" data = "${arrowLeft}">${'←'}</div>
+    <div class="down btn" data = "${arrowDown}">${'↓'}</div>
+    <div class="arrow-right btn" data = "${arrowRight}">${'→'}</div>
+    <div class="ctrl-button btn right" data = "${ctrl}">${'Ctrl'}</div>`;
+  document.querySelector('.fifth-row').innerHTML = outFifth;
 }
 initFifthRow();
 
+const keys = document.querySelectorAll('.btn');
+// console.log(keys);
 
-document.onkeydown = function(event) {
-    console.log(event.code);
-    console.log(event.key);
-    
-    // console.log(event.keyCode);
-    document.querySelectorAll(`.btn`).forEach(function(element){
-        element.classList.remove('active');
+// keys.forEach(key => {
+//   console.log(1);
+//   key.onclick = () => {
+//     console.log(2);
+//     textarea.focus();
+//   };
+// });
 
-    });
+keys.forEach(key => {
+  // console.log('Повешен обработчик на кнопку: ' + key.textContent);
+  key.addEventListener('click', () => {
+    // console.log('Обработчик сработал');
+    textarea.focus();
+  });
 
-    if(event.location === 2){
-        document.querySelector(`.btn[data="${event.keyCode}"].right`)?.classList.add('active')
-      }else{
-        document.querySelector(`.btn[data="${event.keyCode}"]`)?.classList.add('active')
-      }
-    // document.querySelector(` .btn[data="${event.keyCode}"]`).classList.add('active')
-}
-
-document.querySelectorAll(`.keyboard .btn`).forEach(function(element){
-    element.onclick = function(event){
-        document.querySelectorAll(`.keyboard .btn`).forEach(function(element){
-            element.classList.remove('active');
-        });
-        let code = this.getAttribute('data');
-        this.classList.add('active');
-        console.log(code);
-    }
-    
+  key.addEventListener('keydown', () => {
+    // console.log('Обработчик сработал');
+    textarea.focus();
+  });
 });
+
+// keys.forEach(key =>(key.onclick = () => textarea.focus()));
+
+keys.forEach(key => (key.onclick = () => textarea.focus()));
+
+document.onkeydown = function (event) {
+  console.log(event.code);
+  console.log(event.key);
+  console.log(event.keyCode);
+  document.querySelectorAll('.btn').forEach((element) => {
+    element.classList.remove('active');
+  });
+  if (event.location === 2) {
+    document.querySelector(`.btn[data="${event.keyCode}"].right`)?.classList.add('active');
+  } else {
+    document.querySelector(`.btn[data="${event.keyCode}"]`)?.classList.add('active');
+  }
+};
+document.querySelectorAll('.keyboard .btn').forEach((element) => {
+  element.onclick = function (event) {
+    document.querySelectorAll('.keyboard .btn').forEach((element) => {
+      element.classList.remove('active');
+    });
+    const code = this.getAttribute('data');
+    this.classList.add('active');
+  };
+});
+
+const langInfo = document.createElement('div');
+langInfo.classList.add('langInfo');
+langInfo.innerHTML = `<div class="langInfo">Клавиатура создана в операционной Windows.<br>Для переключения языка - комбинация клавиш Alt+Shift</div>`;
+document.body.append(langInfo);
+
+// function changeLanguage() {
+//   lang = lang == 'ru'? 'en': 'ru';
+//   keysdata.forEach(row => {
+//     row.forEach(key => {
+//       if (key[`${lang}_char`]) {
+//         const key = document.querySelector(`.key-${key.code} .key_main-char`)
+//       }
+
+//     })
+//   })
+// }
