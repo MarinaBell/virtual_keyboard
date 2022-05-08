@@ -103,7 +103,7 @@ body {
 }
 
 .active {
-  background-color: cyan;
+  background-color: cyan !important;
 }
 
 .first-row {
@@ -292,7 +292,7 @@ body {
           justify-content: center;
 }
 
-.left, .right, .up, .down {
+.left, .arrow-right, .up, .down {
   width: 50px;
   height: 50px;
   border: 2px solid #000;
