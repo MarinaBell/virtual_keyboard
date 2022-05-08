@@ -37,7 +37,7 @@ body {
 
 
 .keyboard {
-    border: 2px solid #000;
+    // border: 2px solid #000;
     padding: 5px;
     display: flex;
     flex-direction: column;
@@ -73,7 +73,7 @@ body {
 .button {
     width: 50px;
     height: 50px;
-    border: 2px solid #000;
+    // border: 2px solid #000;
     margin: 2px;
     padding: 2px;
     background-color: #fff;
@@ -81,13 +81,25 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: .3s;
+    transition: .2s;
 
 
 }
+
 .active {
     background-color: cyan !important;
+    border-radius: 12px  !important;;
     
+}
+
+.btn {
+    background-color: #fff;
+}
+
+
+.btn:hover {
+    background-color: #79a0c1 !important;
+    cursor: pointer;
 }
 
 .first-row {
@@ -104,7 +116,7 @@ body {
 .button-backspace {
     width: 105px;
     height: 50px;
-    border: 2px solid #000;
+    // border: 2px solid #000;
     margin: 2px;
     padding: 2px;
     background-color: #fff;
@@ -112,6 +124,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    &:hover {
+        background-color: #79a0c1 !important;
+    cursor: pointer;
+    }
 
 }
 
@@ -121,10 +138,7 @@ body {
     display: flex;
     justify-content: center;
 }
-// .third-row-buttons {
-//     width: 100%;
-//     display: flex;
-// }
+
 
 .second-row-buttons, .third-row-buttons, .fourth-row-buttons, .fifth-row-buttons {
     display: flex;
@@ -133,7 +147,7 @@ body {
 .button-tab {
     width: 77px;
     height: 50px;
-    border: 2px solid #000;
+    // border: 2px solid #000;
     margin: 2px;
     padding: 2px;
     background-color: #fff;
@@ -141,13 +155,18 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    &:hover {
+        background-color: #79a0c1 !important;
+    cursor: pointer;
+    }
 
 }
 
 .button-del{
     width: 77px;
     height: 50px;
-    border: 2px solid #000;
+    // border: 2px solid #000;
     margin: 2px;
     padding: 2px;
     background-color: #fff;
@@ -156,12 +175,14 @@ body {
     align-items: center;
     justify-content: center;
 
+    
+
 }
 
 .caps-button {
     width: 105px;
     height: 50px;
-    border: 2px solid #000;
+    // border: 2px solid #000;
     margin: 2px;
     padding: 2px;
     background-color: #fff;
@@ -175,7 +196,7 @@ body {
  .enter-button {
     width: 105px;
     height: 50px;
-    border: 2px solid #000;
+    // border: 2px solid #000;
     margin: 2px;
     padding: 2px;
     background-color: #fff;
@@ -189,7 +210,7 @@ body {
 .shift-tab {
     width: 103px;
     height: 50px;
-    border: 2px solid #000;
+    // border: 2px solid #000;
     margin: 2px;
     padding: 2px;
     background-color: #fff;
@@ -203,7 +224,7 @@ body {
 .ctrl-button {
     width: 50px;
     height: 50px;
-    border: 2px solid #000;
+    // border: 2px solid #000;
     margin: 2px;
     padding: 2px;
     background-color: #fff;
@@ -216,7 +237,7 @@ body {
 .space-tab {
     width: 375px;
     height: 50px;
-    border: 2px solid #000;
+    // border: 2px solid #000;
     margin: 2px;
     padding: 2px;
     background-color: #fff;
@@ -229,7 +250,7 @@ body {
 .left, .arrow-right, .up, .down {
     width: 50px;
     height: 50px;
-    border: 2px solid #000;
+    // border: 2px solid #000;
     margin: 2px;
     padding: 2px;
     background-color: #fff;

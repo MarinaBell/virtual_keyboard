@@ -39,12 +39,10 @@ body {
 }
 
 .keyboard {
-  border: 2px solid #000;
   padding: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  /* flex-wrap: wrap; */
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -86,7 +84,6 @@ body {
 .button {
   width: 50px;
   height: 50px;
-  border: 2px solid #000;
   margin: 2px;
   padding: 2px;
   background-color: #fff;
@@ -100,10 +97,22 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-transition: .2s;
+  transition: .2s;
 }
 
 .active {
   background-color: cyan !important;
+  border-radius: 12px  !important;
+}
+
+.btn {
+  background-color: #fff;
+}
+
+.btn:hover {
+  background-color: #79a0c1 !important;
+  cursor: pointer;
 }
 
 .first-row {
@@ -126,7 +135,6 @@ body {
 .button-backspace {
   width: 105px;
   height: 50px;
-  border: 2px solid #000;
   margin: 2px;
   padding: 2px;
   background-color: #fff;
@@ -140,6 +148,11 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.button-backspace:hover {
+  background-color: #79a0c1 !important;
+  cursor: pointer;
 }
 
 .second-row, .third-row, .fourth-row, .fifth-row {
@@ -162,7 +175,6 @@ body {
 .button-tab {
   width: 77px;
   height: 50px;
-  border: 2px solid #000;
   margin: 2px;
   padding: 2px;
   background-color: #fff;
@@ -178,10 +190,14 @@ body {
           justify-content: center;
 }
 
+.button-tab:hover {
+  background-color: #79a0c1 !important;
+  cursor: pointer;
+}
+
 .button-del {
   width: 77px;
   height: 50px;
-  border: 2px solid #000;
   margin: 2px;
   padding: 2px;
   background-color: #fff;
@@ -200,7 +216,6 @@ body {
 .caps-button {
   width: 105px;
   height: 50px;
-  border: 2px solid #000;
   margin: 2px;
   padding: 2px;
   background-color: #fff;
@@ -219,7 +234,6 @@ body {
 .enter-button {
   width: 105px;
   height: 50px;
-  border: 2px solid #000;
   margin: 2px;
   padding: 2px;
   background-color: #fff;
@@ -238,7 +252,6 @@ body {
 .shift-tab {
   width: 103px;
   height: 50px;
-  border: 2px solid #000;
   margin: 2px;
   padding: 2px;
   background-color: #fff;
@@ -257,7 +270,6 @@ body {
 .ctrl-button {
   width: 50px;
   height: 50px;
-  border: 2px solid #000;
   margin: 2px;
   padding: 2px;
   background-color: #fff;
@@ -276,7 +288,6 @@ body {
 .space-tab {
   width: 375px;
   height: 50px;
-  border: 2px solid #000;
   margin: 2px;
   padding: 2px;
   background-color: #fff;
@@ -295,7 +306,6 @@ body {
 .left, .arrow-right, .up, .down {
   width: 50px;
   height: 50px;
-  border: 2px solid #000;
   margin: 2px;
   padding: 2px;
   background-color: #fff;
