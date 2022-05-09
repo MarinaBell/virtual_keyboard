@@ -236,18 +236,18 @@ document.querySelectorAll('.keyboard .btn').forEach((element) => {
 
 const langInfo = document.createElement('div');
 langInfo.classList.add('langInfo');
-langInfo.innerHTML = `<div class="langInfo">Клавиатура создана в операционной Windows.<br>Для переключения языка - комбинация клавиш Alt+Shift</div>`;
+langInfo.innerHTML = `<div class="langInfo">Клавиатура создана в операционной Windows.<br>Переключение языка происходит при перезагрузке страницы</div>`;
 document.body.append(langInfo);
 
-const langBtn = document.createElement('button');
-langBtn.innerHTML = `<button class="langBtn">En</button>`
-document.body.append(langBtn);
+// const langBtn = document.createElement('button');
+// langBtn.innerHTML = `<button class="langBtn">En</button>`
+// document.body.append(langBtn);
 
 
-(function clickEngLang () {
-  langBtn.addEventListener('click', () => {
-    changeLanguage(lang)
-  });
-}());
+// (function clickEngLang () {
+//   langBtn.addEventListener('click', () => {
+//     changeLanguage(lang)
+//   });
+// }());
 
 
