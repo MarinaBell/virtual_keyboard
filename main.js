@@ -1,5 +1,7 @@
-import keysdata from './keys.js';
-console.log(keysdata[0][0])
+import btnData from './translate.js';
+
+let lang = localStorage.getItem('lang') === 'ru' ? 'ru' : 'en';
+
 const textarea = document.createElement('textarea');
 textarea.className = 'textarea';
 textarea.placeholder = '';
@@ -57,8 +59,8 @@ const v = 86;
 const b = 66;
 const n = 78;
 const m = 77;
-const quoteleft = 188;
-const quoteright = 190;
+const comma = 188;
+const period = 190;
 const slash = 191;
 const tab = 9;
 const caps = 20;
@@ -77,7 +79,7 @@ const arrowDown = 40;
 const del = 46;
 function initFirstRow() {
   let outFirst = '';
-  outFirst = ` <div class="button btn" data = "${backQuote}">${'`'}</div>
+  outFirst = ` <div class="button btn" data = "${backQuote}">${btnData[lang].backquote}</div>
     <div class="button btn" data = "${digit1}">${String.fromCharCode(digit1)}</div>
     <div class="button btn" data = "${digit2}">${String.fromCharCode(digit2)}</div>
     <div class="button btn" data = "${digit3}">${String.fromCharCode(digit3)}</div>
@@ -98,18 +100,18 @@ initFirstRow();
 function initSecondRow() {
   let outSecond = '';
   outSecond = ` <div class="button-tab btn" data = "${tab}">${String.fromCharCode(tab)}Tab</div>
-    <div class="button btn" data = "${q}">${String.fromCharCode(q)}</div>
-    <div class="button btn" data = "${w}">${String.fromCharCode(w)}</div>
-    <div class="button btn" data = "${e}">${String.fromCharCode(e)}</div>
-    <div class="button btn" data = "${r}">${String.fromCharCode(r)}</div>
-    <div class="button btn" data = "${t}">${String.fromCharCode(t)}</div>
-    <div class="button btn" data = "${y}">${String.fromCharCode(y)}</div>
-    <div class="button btn" data = "${u}">${String.fromCharCode(u)}</div>
-    <div class="button btn" data = "${i}">${String.fromCharCode(i)}</div>
-    <div class="button btn" data = "${o}">${String.fromCharCode(o)}</div>
-    <div class="button btn" data = "${p}">${String.fromCharCode(p)}</div>
-    <div class="button btn" data = "${bracketLeft}">${"["}</div>
-    <div class="button btn" data = "${bracketRight}">${"]"}</div>
+    <div class="button btn" data = "${q}">${btnData[lang].q}</div>
+    <div class="button btn" data = "${w}">${btnData[lang].w}</div>
+    <div class="button btn" data = "${e}">${btnData[lang].e}</div>
+    <div class="button btn" data = "${r}">${btnData[lang].r}</div>
+    <div class="button btn" data = "${t}">${btnData[lang].t}</div>
+    <div class="button btn" data = "${y}">${btnData[lang].y}</div>
+    <div class="button btn" data = "${u}">${btnData[lang].u}</div>
+    <div class="button btn" data = "${i}">${btnData[lang].i}</div>
+    <div class="button btn" data = "${o}">${btnData[lang].o}</div>
+    <div class="button btn" data = "${p}">${btnData[lang].p}</div>
+    <div class="button btn" data = "${bracketLeft}">${btnData[lang].bracketLeft}</div>
+    <div class="button btn" data = "${bracketRight}">${btnData[lang].bracketRight}</div>
     <div class="button-tab btn" data = "${del}">${'Del'}</div>`;
   document.querySelector('.second-row').innerHTML = outSecond;
 }
@@ -118,17 +120,17 @@ initSecondRow();
 function initThirdRow() {
   let outThird = '';
   outThird = ` <div class="caps-button btn" data = "${caps}">${'Caps Lock'}</div>
-    <div class="button btn" data = "${a}">${String.fromCharCode(a)}</div>
-    <div class="button btn" data = "${s}">${String.fromCharCode(s)}</div>
-    <div class="button btn" data = "${d}">${String.fromCharCode(d)}</div>
-    <div class="button btn" data = "${f}">${String.fromCharCode(f)}</div>
-    <div class="button btn" data = "${g}">${String.fromCharCode(g)}</div>
-    <div class="button btn" data = "${h}">${String.fromCharCode(h)}</div>
-    <div class="button btn" data = "${j}">${String.fromCharCode(j)}</div>
-    <div class="button btn" data = "${k}">${String.fromCharCode(k)}</div>
-    <div class="button btn" data = "${l}">${String.fromCharCode(l)}</div>
-    <div class="button btn" data = "${semicolon}">${";"}</div>
-    <div class="button btn" data = "${quote}">${'"'}</div>
+    <div class="button btn" data = "${a}">${btnData[lang].a}</div>
+    <div class="button btn" data = "${s}">${btnData[lang].s}</div>
+    <div class="button btn" data = "${d}">${btnData[lang].d}</div>
+    <div class="button btn" data = "${f}">${btnData[lang].f}</div>
+    <div class="button btn" data = "${g}">${btnData[lang].g}</div>
+    <div class="button btn" data = "${h}">${btnData[lang].h}</div>
+    <div class="button btn" data = "${j}">${btnData[lang].j}</div>
+    <div class="button btn" data = "${k}">${btnData[lang].k}</div>
+    <div class="button btn" data = "${l}">${btnData[lang].l}</div>
+    <div class="button btn" data = "${semicolon}">${btnData[lang].semicolon}</div>
+    <div class="button btn" data = "${quote}">${btnData[lang].quote}</div>
     <div class="enter-button btn" data = "${enter}">${String.fromCharCode(enter)}Enter</div>`;
 
   document.querySelector('.third-row').innerHTML = outThird;
@@ -138,16 +140,16 @@ initThirdRow();
 function initFourthRow() {
   let outFourth = '';
   outFourth = ` <div class="shift-tab btn" data = "${shiftLeft}">${'Shift'}</div>
-    <div class="button btn" data = "${z}">${String.fromCharCode(z)}</div>
-    <div class="button btn" data = "${x}">${String.fromCharCode(x)}</div>
-    <div class="button btn" data = "${c}">${String.fromCharCode(c)}</div>
-    <div class="button btn" data = "${v}">${String.fromCharCode(v)}</div>
-    <div class="button btn" data = "${b}">${String.fromCharCode(b)}</div>
-    <div class="button btn" data = "${n}">${String.fromCharCode(n)}</div>
-    <div class="button btn" data = "${m}">${String.fromCharCode(m)}</div>
-    <div class="button btn" data = "${quoteleft}">${","}</div>
-    <div class="button btn" data = "${quoteright}">${"."}</div>
-    <div class="button btn" data = "${slash}">${"/"}</div>
+    <div class="button btn" data = "${z}">${btnData[lang].z}</div>
+    <div class="button btn" data = "${x}">${btnData[lang].x}</div>
+    <div class="button btn" data = "${c}">${btnData[lang].c}</div>
+    <div class="button btn" data = "${v}">${btnData[lang].v}</div>
+    <div class="button btn" data = "${b}">${btnData[lang].b}</div>
+    <div class="button btn" data = "${n}">${btnData[lang].n}</div>
+    <div class="button btn" data = "${m}">${btnData[lang].m}</div>
+    <div class="button btn" data = "${comma}">${btnData[lang].comma}</div>
+    <div class="button btn" data = "${period}">${btnData[lang].period}</div>
+    <div class="button btn" data = "${slash}">${btnData[lang].slash}</div>
     <div class="button btn" data = "${arrowUp}">${'↑'}</div>
     <div class="shift-tab btn right" data = "${shiftRight}">${'Shift'}</div>`;
   document.querySelector('.fourth-row').innerHTML = outFourth;
@@ -170,32 +172,38 @@ function initFifthRow() {
 initFifthRow();
 
 const keys = document.querySelectorAll('.btn');
-// console.log(keys);
-
-// keys.forEach(key => {
-//   console.log(1);
-//   key.onclick = () => {
-//     console.log(2);
-//     textarea.focus();
-//   };
-// });
 
 keys.forEach(key => {
-  // console.log('Повешен обработчик на кнопку: ' + key.textContent);
   key.addEventListener('click', () => {
-    // console.log('Обработчик сработал');
     textarea.focus();
   });
 
   key.addEventListener('keydown', () => {
-    // console.log('Обработчик сработал');
     textarea.focus();
   });
 });
 
-// keys.forEach(key =>(key.onclick = () => textarea.focus()));
-
 keys.forEach(key => (key.onclick = () => textarea.focus()));
+
+function setLocalStorage() {
+  localStorage.setItem('lang', lang);
+
+}
+window.addEventListener('beforeunload', setLocalStorage);
+
+function getLocalStorage() {
+  if(localStorage.getItem('lang')) {
+    const lang = localStorage.getItem('lang');
+    changeLanguage(lang);
+  }
+
+}
+window.addEventListener('load', getLocalStorage)
+
+
+function changeLanguage() {
+  lang = lang === 'ru'? 'en':'ru';
+}
 
 document.onkeydown = function (event) {
   console.log(event.code);
@@ -209,7 +217,13 @@ document.onkeydown = function (event) {
   } else {
     document.querySelector(`.btn[data="${event.keyCode}"]`)?.classList.add('active');
   }
+  if (event.altKey && event.shiftKey && !event.repeat) {
+    changeLanguage(lang);
+  }
 };
+
+
+
 document.querySelectorAll('.keyboard .btn').forEach((element) => {
   element.onclick = function (event) {
     document.querySelectorAll('.keyboard .btn').forEach((element) => {
@@ -225,14 +239,15 @@ langInfo.classList.add('langInfo');
 langInfo.innerHTML = `<div class="langInfo">Клавиатура создана в операционной Windows.<br>Для переключения языка - комбинация клавиш Alt+Shift</div>`;
 document.body.append(langInfo);
 
-// function changeLanguage() {
-//   lang = lang == 'ru'? 'en': 'ru';
-//   keysdata.forEach(row => {
-//     row.forEach(key => {
-//       if (key[`${lang}_char`]) {
-//         const key = document.querySelector(`.key-${key.code} .key_main-char`)
-//       }
+const langBtn = document.createElement('button');
+langBtn.innerHTML = `<button class="langBtn">En</button>`
+document.body.append(langBtn);
 
-//     })
-//   })
-// }
+
+(function clickEngLang () {
+  langBtn.addEventListener('click', () => {
+    changeLanguage(lang)
+  });
+}());
+
+
