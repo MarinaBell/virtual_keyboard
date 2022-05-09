@@ -239,15 +239,6 @@ langInfo.classList.add('langInfo');
 langInfo.innerHTML = `<div class="langInfo">Клавиатура создана в операционной Windows.<br>Переключение языка происходит при перезагрузке страницы</div>`;
 document.body.append(langInfo);
 
-// const langBtn = document.createElement('button');
-// langBtn.innerHTML = `<button class="langBtn">En</button>`
-// document.body.append(langBtn);
 
-
-// (function clickEngLang () {
-//   langBtn.addEventListener('click', () => {
-//     changeLanguage(lang)
-//   });
-// }());
 
 
